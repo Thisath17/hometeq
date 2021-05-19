@@ -47,15 +47,18 @@ $_SESSION['basket'][$newprodid]=$reququantity;
 echo "<p>1 item added <br>";
 
 }
-
 else { 
     echo "Basket unchanged.... <br>"; 
 }
 
-echo "<table>";
-echo "<tr>";
+//Created the html table to display items in the basket
+echo "<table style='border: solid black 1px'>";; 
+echo "<th>Product Name</th>";
+echo "<th>Price</th>";
+echo "<th>Qunatity</th>";
+echo "<th>Subtotal</th>";
+echo "<th>Remove Product</th>";
 echo "</tr>";
-echo "</table>";
  
 include("footfile.html");               //include head layout 
  
