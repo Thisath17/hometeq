@@ -62,6 +62,61 @@ echo "<th>Subtotal</th>";
 echo "<th>Remove Product</th>";
 echo "</tr>";
  
+
+if (isset($_SESSION['basket'])) { 
+  
+    //loop through the basket session array for each data item inside the session using a foreach loop
+    //to split the session array between the index and the content of the cell 
+    //for each iteration of the loop //store the id in a local variable $index & store the required quantity into a local variable $value
+     foreach($_SESSION['basket'] as $index => $value){ 
+    //SQL query to retrieve from Product table details of selected product for which id matches $index 
+    
+    //execute query and create array of records $arrayp 
+    $SQL="select prodId, prodName, prodPrice from Product where prodId= $index";
+    $exeSQL=mysqli_query($conn, $SQL) or die (mysqli_error($conn));
+    $arrayp=mysqli_fetch_array($exeSQL); 
+    
+    echo "<tr>";
+    
+    echo "<td>".$arrayp['prodName']."</td>";
+    echo "<td>".$arrayp['prodPrice']."</td>";
+    // display selected quantity of product retrieved from the cell of session array and now in $value 
+    echo "<td>".$value."</td>";
+    
+     
+    //calculate subtotal, store it in a local variable $subtotal and display it 
+    $subtotal=$arrayp['prodPrice'] * $value; //increase total by adding the subtotal to the current total
+    echo "<td>".$subtotal."</td>";
+    
+    
+    $to= $to+ $subtotal;
+    
+    echo "<form action=basket.php method=post>";
+    echo "<td>";
+    echo "<input type=submit value='Remove'>";
+    echo "</td>";
+    echo "<input type=hidden name=delnb value=".$arrayp['prodId'].">";
+    echo "</form>";
+    echo "</tr>";
+    
+     }
+     
+    
+    }
+    
+    else {
+      echo "Empty basket";
+    }
+    echo "<tr>";
+      echo "<td colspan= '3'>Total</td>";
+      echo "<td>".$to."</td>";
+      echo "</tr>";
+    
+    
+    echo "</table><br>";
+    echo"<a href ='clearbasket.php'> Clear Basket</a><br><br>"; // hyper link for the clear basket page
+    
+
 include("footfile.html");               //include head layout 
  
 echo "</body>"; 
