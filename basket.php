@@ -19,8 +19,9 @@ if (isset($_POST['delnb']))   // //if the value of the product id to be deleted 
 {
 $delprodId=$_POST['delnb'];//capture the posted product id and assign it to a local variable $delprodid
 unset($_SESSION['basket'][$delprodId]);//unset the cell of the session for this posted product id variable
-}
 echo "1 item removed from the basket<br>";//display a "1 item removed from the basket" message
+}
+
 
 $to =0; 
 if (isset($_POST['h_prodid'])) { 
