@@ -13,6 +13,7 @@ include ("headfile.html");              //include header layout file
  
 echo "<h4>".$pagename."</h4>";          //display name of the page on the web page 
 
+
 // Remove from the basket
 if (isset($_POST['delnb']))   // //if the value of the product id to be deleted (which was posted through the hidden field) is set
 {
@@ -52,7 +53,8 @@ else {
 }
 
 //Created the html table to display items in the basket
-echo "<table style='border: solid black 1px'>";; 
+echo "<table style='border: solid black 1px'>";
+echo "<tr>"; 
 echo "<th>Product Name</th>";
 echo "<th>Price</th>";
 echo "<th>Qunatity</th>";
