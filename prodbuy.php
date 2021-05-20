@@ -16,7 +16,7 @@ echo "<h4>".$pagename."</h4>";              //display name of the page on the we
 //applied to the query string u_prod_id 
 //store the value in a local variable called $prodid 
 $prodid=$_GET['u_prod_id'];
-$prodquantity=$_GET['p_quality']; 
+//$prodquantity=$_GET['p_quality']; 
  
 //display the value of the product id, for debugging purposes 
 echo "<p>Selected product Id: ".$prodid;
