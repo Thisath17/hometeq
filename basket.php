@@ -32,7 +32,7 @@ $newprodid=$_POST['h_prodid'];
 //capture the required quantity of selected product using the POST method and $_POST superglobal variable
 //and store it in a new local variable called $reququantity
 
-$reququantity =$_POST['p_quantity'];
+$reququantity =$_POST['p_quality'];
 
 
 
