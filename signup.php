@@ -44,12 +44,12 @@ echo "</tr>";
 
 echo "<tr>";
 echo "<td style='border: 0px'><label for='pwd'>Password </label></td>";   // Password
-echo "<td style='border: 0px'><input type='text' name='pwd'></td>";
+echo "<td style='border: 0px'><input type='password' name='pwd'></td>";
 echo "</tr>";
 
 echo "<tr>";
 echo "<td style='border: 0px'><label for='conpwd'>Confirm Password </label></td>";   // Confirmed Password
-echo "<td style='border: 0px'><input type='text' name='conpwd'></td>";
+echo "<td style='border: 0px'><input type='password' name='conpwd'></td>";
 echo "</tr>";
 
 echo"<tr>";
