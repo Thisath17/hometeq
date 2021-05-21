@@ -22,7 +22,7 @@ echo "</tr>";
 // Creating the Password lable and the text field in the HTML table
 echo "<tr>";
 echo "<td style='border: 0px'><label for='pwd'>Password </label></td>";   // Password
-echo "<td style='border: 0px'><input type='text' name='Password'></td>";
+echo "<td style='border: 0px'><input type='password' name='Password'></td>";
 echo "</tr>";
 
 echo"<tr>";
