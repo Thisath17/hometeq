@@ -22,11 +22,11 @@ if (empty($email) || empty($password)) {//
     echo "<p>Go Back to <a href='login.php'>Log In</a></p>";
 
 } else {
+    // Calling the Email & password from the MySQL database 
     $SQL="select * from Users where userEmail = '".$email."'";
     $exeSQL=mysqli_query($conn, $SQL) or die (mysqli_error($conn));
     $arrayU=mysqli_fetch_array($exeSQL);
      
-    
     $nberecs =mysqli_num_rows($exeSQL);
 
     if ($nberecs == 0){
