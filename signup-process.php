@@ -61,6 +61,6 @@ else{
     echo "<p>Go back to : <a href='signup.php'>Sign Up</a> </p>";
 }
 
-include("footfile.html"); //include head layout
+include("footfile.html"); //include footer layout
 echo "</body>";
 ?>
