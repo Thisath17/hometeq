@@ -35,6 +35,6 @@ echo "</tr>";
 
 echo "</table>";
 
-include("footfile.html"); //include head layout
+include("footfile.html"); //include footer layout
 echo "</body>";
 ?>

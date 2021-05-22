@@ -52,6 +52,6 @@ if (empty($email) || empty($password)) {//
     }
 }
 
-include("footfile.html"); //include head layout
+include("footfile.html"); //include Footer layout
 echo "</body>";
 ?>
