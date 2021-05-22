@@ -6,13 +6,12 @@ echo "<body>";
 include ("headfile.html"); //include header layout file
 echo "<h4>".$pagename."</h4>"; //display name of the page on the web page
 
-
+// Creating the login form
 echo "<form action =signup-process.php method=post>";
-
 echo "<table style='border: 0px' ; align ='center'>";
 
+// Creating the labels and text fields in the sign up form 
 echo "<tr>";
-
 echo "<td style='border: 0px'><label for='fname'>First name </label></td>";   // First Name
 echo "<td style='border: 0px'><input type='text' name='fname'></td>";
 echo "</tr>";
@@ -52,6 +51,7 @@ echo "<td style='border: 0px'><label for='conpwd'>Confirm Password </label></td>
 echo "<td style='border: 0px'><input type='password' name='conpwd'></td>";
 echo "</tr>";
 
+
 echo"<tr>";
 echo "<td style='border: 0px'><input type=submit name='submitbtn' value='Submit' id='submitbtn'></td>";
 echo "</tr>";
@@ -59,6 +59,6 @@ echo "</tr>";
 
 echo "</table>";
 
-include("footfile.html"); //include head layout
+include("footfile.html"); //include footer layout
 echo "</body>";
 ?>
