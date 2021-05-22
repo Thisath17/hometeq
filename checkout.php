@@ -14,7 +14,7 @@ $to = 0;
 $currentDateTime = date('Y-m-d H:i:s');
 $User = $_SESSION ['userId'];
 
-
+// create a $SQL variable with a SQL statement that retrieves 
 $SQL="INSERT INTO Orders(userId,orderDateTime,orderTotal,orderstatus) 
 VALUES ('$User','$currentDateTime',0,'Placed')";
 $exeSQL=mysqli_query($conn, $SQL) or die (mysqli_error($conn));
