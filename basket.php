@@ -117,10 +117,7 @@ if (isset($_SESSION['basket'])) {
     
     if (isset($_SESSION['userId'])){
       echo "<p>To Finalize your order :<a href='checkout.php'>Check Out</a></p>";
-    }
-    
-    else{
-    
+    } else{
     echo"<p>New Homteq Customers : <a href='signup.php'>Sign Up</a></p><br>"; // linking signup page for the new members
     echo"<p>Returning Homteq Customers : <a href='login.php'>Log In</a></p>"; // linking logIn page for the existing customers
     }

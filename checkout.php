@@ -46,7 +46,7 @@ foreach($_SESSION['basket'] as $index => $value){
       $subtotal=$value * $arrayb['prodPrice'];
 
       
-      $SQL4="insert into order_line (orderNo, prodId, quantityOrdered, subToatal) values (".$latestOrderNo.",".$index.",".$value.",".$subtotal.")";
+      $SQL4="insert into order_line (orderNo, prodId, quantityOrdered, subTotal) values (".$latestOrderNo.",".$index.",".$value.",".$subtotal.")";
       $exeSQL4=mysqli_query($conn, $SQL4) or die (mysqli_error($conn));
  
       echo "<tr>";
