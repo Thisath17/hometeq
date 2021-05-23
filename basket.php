@@ -99,14 +99,11 @@ if (isset($_SESSION['basket'])) {
     echo "<input type=hidden name=delnb value=".$arrayp['prodId'].">";
     echo "</form>";
     echo "</tr>";
-    
      }
-     
-    
     }
     
     else {
-      echo "Empty basket";
+      echo "Empty basket<br>";
     }
     echo "<tr>";
       echo "<td colspan= '3'>Total</td>";
