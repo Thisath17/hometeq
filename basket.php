@@ -50,7 +50,7 @@ echo "<p>1 item added <br>";
 
 }
 else { 
-    echo "Basket unchanged.... <br>"; 
+    echo "<p>Basket unchanged....</p> <br>"; 
 }
 
 //Created the html table to display items in the basket
@@ -111,7 +111,7 @@ if (isset($_SESSION['basket'])) {
       echo "</tr>";
     
     
-    echo "</table><br>";
+    echo "</table><br><br>";
     
     echo"<a href ='clearbasket.php'> Clear Basket</a><br><br>"; // hyper link for the clear basket page
     
